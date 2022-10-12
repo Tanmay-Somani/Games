@@ -16,6 +16,7 @@ while True:
     elif choice == "Y":
         print("Rolling the die")
         choice_disp = randint(1, 6)
+        sum=0
         if choice_disp == 1:
             print('''
              _____
@@ -81,5 +82,7 @@ while True:
            |         |
            |_________|
             ''')
+        sum=sum+choice_disp
+        print(sum)
     else:
         print("only accepts Y or N as an input")
