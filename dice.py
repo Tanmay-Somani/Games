@@ -8,15 +8,15 @@ print('''
                                                                 
 ''')
 choice = ' '
+sum = 0
 while True:
-    choice = input("Do you wish to roll the die[Y/N]").upper()
+    choice = input("Do you wish to roll the die[Y/N]--").upper()
     if choice == "N":
         print("Exiting the program")
         break
     elif choice == "Y":
         print("Rolling the die")
         choice_disp = randint(1, 6)
-        sum=0
         if choice_disp == 1:
             print('''
              _____
@@ -82,7 +82,12 @@ while True:
            |         |
            |_________|
             ''')
-        sum=sum+choice_disp
+        sum = sum + choice_disp
         print(sum)
+        sum_res = input("do you wish to reset your score??[Y/N]--").upper()
+        if sum_res == "N":
+            continue
+        if sum_res == "Y":
+            sum = 0
     else:
         print("only accepts Y or N as an input")
